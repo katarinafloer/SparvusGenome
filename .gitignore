@@ -1,0 +1,15 @@
+*.out
+*.err
+*.log
+*.bam
+*.sam
+*.fastq
+*.fastq.gz
+*.fq.gz
+*.fa
+*.fasta
+*.gz
+*.tmp
+slurm-*
+job_logs/
+busco_downloads/
