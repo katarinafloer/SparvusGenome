@@ -1,0 +1,9 @@
+name: assembly_env
+channels:
+  - conda-forge
+dependencies:
+  - hifiasm
+  - seqkit
+  - quast
+  - minimap2
+prefix: /work/pi_lmangiamele_smith_edu/kfloer_smith_edu/.conda/envs/assembly_env
