@@ -11,7 +11,9 @@ OUTPUT_DIR=${SCRATCH_DIR}/assembly_output
 
 LOG_DIR=${PROJ_DIR}/job_logs
 
-ASSEMBLY=${OUTPUT_DIR}/sparvus_primary_contigs.fa
+#ASSEMBLY=${OUTPUT_DIR}/sparvus_primary_contigs.fa
+ASSEMBLY=${SCRATCH_DIR}/assembly_output/sparvus_primary_contigs.fcs_adaptor_clean.fa
+
 CONTAM_DIR=${SCRATCH_DIR}/contamination_check
 CONTAM_LOG_DIR=${LOG_DIR}/contamination_check
 
