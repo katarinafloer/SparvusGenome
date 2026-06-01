@@ -5,7 +5,7 @@
 #SBATCH --time=24:00:00
 #SBATCH --output=/home/kfloer_smith_edu/assembly/job_logs/%j.fcs_gx.out
 #SBATCH --error=/home/kfloer_smith_edu/assembly/job_logs/%j.fcs_gx.err
-#SBATCH --mail-type=FAIL
+#SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=kfloer@smith.edu
 
 set -euo pipefail
