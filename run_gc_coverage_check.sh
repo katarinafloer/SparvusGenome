@@ -12,9 +12,15 @@ set -euo pipefail
 
 source ~/assembly/scripts/sparvus_config.sh
 
-module load minimap2
-module load samtools
-module load seqkit
+module load uri/main
+module load samtools/1.19.2
+
+source /modules/opt/linux-ubuntu24.04-x86_64/miniforge3/24.7.1/etc/profile.d/conda.sh
+conda activate /work/pi_lmangiamele_smith_edu/kfloer_smith_edu/.conda/envs/assembly_env
+
+which minimap2
+which seqkit
+which samtools
 
 OUTDIR=${SCRATCH_DIR}/contamination_check/gc_coverage
 mkdir -p "$OUTDIR"
