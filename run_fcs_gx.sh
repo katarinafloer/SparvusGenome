@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=fcs_gx
 #SBATCH --cpus-per-task=16
-#SBATCH --mem=256G
-#SBATCH --time=24:00:00
+#SBATCH --mem=512G
+#SBATCH --time=36:00:00
 #SBATCH --output=/home/kfloer_smith_edu/assembly/job_logs/%j.fcs_gx.out
 #SBATCH --error=/home/kfloer_smith_edu/assembly/job_logs/%j.fcs_gx.err
 #SBATCH --mail-type=BEGIN,END,FAIL
