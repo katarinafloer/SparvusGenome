@@ -49,7 +49,8 @@ busco \
   -m genome \
   --cpu "$BUSCO_THREADS" \
   --offline \
-  --download_path "$BUSCO_DOWNLOADS"
+  --download_path "$BUSCO_DOWNLOADS" \
+  -f
 
 echo "Done final stats at $(date)"
 echo "Final assembly: $FINAL_ASSEMBLY"
