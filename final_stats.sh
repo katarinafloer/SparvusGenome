@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=final_stats
-#SBATCH --cpus-per-task=16
-#SBATCH --mem=128G
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=384G
 #SBATCH --time=24:00:00
 #SBATCH --output=/home/kfloer_smith_edu/assembly/job_logs/%j.final_stats.out
 #SBATCH --error=/home/kfloer_smith_edu/assembly/job_logs/%j.final_stats.err
