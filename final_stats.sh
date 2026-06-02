@@ -5,7 +5,7 @@
 #SBATCH --time=24:00:00
 #SBATCH --output=/home/kfloer_smith_edu/assembly/job_logs/%j.final_stats.out
 #SBATCH --error=/home/kfloer_smith_edu/assembly/job_logs/%j.final_stats.err
-#SBATCH --mail-type=FAIL
+#SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=kfloer@smith.edu
 
 set -euo pipefail
