@@ -85,7 +85,7 @@ CONDA_ENV=assembly_env
 # =========================
 
 THREADS=32
-BUSCO_THREADS=16
+BUSCO_THREADS=8
 MEMORY=256G
 
 ASSEMBLY_PREFIX=sparvus_hifiasm

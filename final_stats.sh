@@ -48,8 +48,7 @@ busco \
   -l "$BUSCO_LINEAGE" \
   -m genome \
   --cpu "$BUSCO_THREADS" \
-  --offline \
-  --download_path "$BUSCO_DOWNLOADS" \
+  --metaeuk \
   -f
 
 echo "Done final stats at $(date)"
