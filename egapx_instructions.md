@@ -196,10 +196,10 @@ For my initial run:
 
 Optional but recommended: validate FASTQ gzip files and assembly basics before submitting EGAPx.
 
-The validation script I used is here:
+The validation script I used is here (and also in this github repo):
 
 ```text
-/home/kfloer_smith_edu/assembly/scripts/validate_sparvus_egapx.sbatch
+/home/kfloer_smith_edu/assembly/scripts/validate_inputs_annot.sh
 ```
 
 Validation output showed:
