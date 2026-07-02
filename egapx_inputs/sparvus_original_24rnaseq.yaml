@@ -1,0 +1,9 @@
+genome: /scratch3/workspace/kfloer_smith_edu-simple/sparvus_hifiasm/assembly_output/sparvus_primary_contigs.ncbi.fa
+taxid: 386267
+short_reads: /scratch3/workspace/kfloer_smith_edu-simple/egapx_sparvus/input/short_reads.txt
+
+trnascan:
+  enabled: true
+
+cmsearch:
+  enabled: true
