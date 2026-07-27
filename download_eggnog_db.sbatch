@@ -16,18 +16,27 @@
 
 EGGNOG_DB=/scratch3/workspace/kfloer_smith_edu-simple/eggnog_db
 
-CONDA_BASE=/modules/opt/linux-ubuntu24.04-x86_64/miniforge3/24.7.1
-source ${CONDA_BASE}/etc/profile.d/conda.sh
-conda activate /work/pi_lmangiamele_smith_edu/kfloer_smith_edu/.conda/envs/eggnog_env
+BASE_URL=http://eggnog5.embl.de/download/emapperdb-5.0.2
 
 mkdir -p ${EGGNOG_DB}
 
 echo "Downloading eggNOG database to ${EGGNOG_DB} at $(date)"
 
-# Downloads eggnog.db (~48 GB) and eggnog_proteins.dmnd (~4 GB)
-download_eggnog_data.py \
-    --data_dir ${EGGNOG_DB} \
-    -y
+# eggnog.db (~48 GB uncompressed) — main annotation database
+wget -c -O ${EGGNOG_DB}/eggnog.db.gz ${BASE_URL}/eggnog.db.gz \
+    && echo "Decompressing eggnog.db..." \
+    && gunzip ${EGGNOG_DB}/eggnog.db.gz
+
+# eggnog.taxa — taxonomy database
+wget -c -O ${EGGNOG_DB}/eggnog.taxa.tar.gz ${BASE_URL}/eggnog.taxa.tar.gz \
+    && echo "Extracting eggnog.taxa..." \
+    && tar -xzf ${EGGNOG_DB}/eggnog.taxa.tar.gz -C ${EGGNOG_DB} \
+    && rm ${EGGNOG_DB}/eggnog.taxa.tar.gz
+
+# eggnog_proteins.dmnd (~4 GB) — DIAMOND search database
+wget -c -O ${EGGNOG_DB}/eggnog_proteins.dmnd.gz ${BASE_URL}/eggnog_proteins.dmnd.gz \
+    && echo "Decompressing eggnog_proteins.dmnd..." \
+    && gunzip ${EGGNOG_DB}/eggnog_proteins.dmnd.gz
 
 echo "Download complete at $(date)"
 du -sh ${EGGNOG_DB}
