@@ -3,12 +3,12 @@
 #SBATCH --partition=cpu
 #SBATCH --qos=long
 #SBATCH --cpus-per-task=16
-#SBATCH --mem=80G
-#SBATCH --time=3-00:00:00
+#SBATCH --mem=64G
+#SBATCH --time=23:00:00
 #SBATCH --output=/home/kfloer_smith_edu/assembly/job_logs/eggnog_sparvus_%j.out
 #SBATCH --error=/home/kfloer_smith_edu/assembly/job_logs/eggnog_sparvus_%j.err
 #SBATCH --mail-type=BEGIN,END,FAIL
-#SBATCH --mail-user=kfloer@uchicago.edu
+#SBATCH --mail-user=kfloer@smith.edu
 
 # eggNOG-mapper v2 on Staurois parvus proteome.
 # Input:  complete.proteins.faa from EGAPx output (~23,550 proteins)
